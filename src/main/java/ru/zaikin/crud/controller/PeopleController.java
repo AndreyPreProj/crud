@@ -6,15 +6,15 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.zaikin.crud.model.Person;
-import ru.zaikin.crud.service.PeopleService;
+import ru.zaikin.crud.service.PeopleServiceImpl;
 
 @Controller
 @RequestMapping("/people")
 public class PeopleController {
-    private final PeopleService peopleService;
+    private final PeopleServiceImpl peopleService;
 
     @Autowired
-    public PeopleController(PeopleService peopleService) {
+    public PeopleController(PeopleServiceImpl peopleService) {
         this.peopleService = peopleService;
     }
 
